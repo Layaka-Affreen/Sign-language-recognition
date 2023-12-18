@@ -109,13 +109,16 @@ Extract frames from gestures in `test_videos` to `test_frames`.
    ```shell
    curl -LO https://github.com/tensorflow/hub/raw/master/examples/image_retraining/retrain.py
    ```
-
+  Note: This link may change in the future. Please refer [Tensorflow retrain tutorial](https://www.tensorflow.org/tutorials/image_retraining#training_on_flowers)
+- Run the following command to retrain the inception model.
+  
     ```shell
     python3 retrain.py --bottleneck_dir=bottlenecks --summaries_dir=training_summaries/long --output_graph=retrained_graph.pb --output_labels=retrained_labels.txt --image_dir=train_frames
     ```
 
 This will create two file `retrained_labels.txt` and `retrained_graph.pb`
 
+For more information about the above command refer [here](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#3).
 
 
 ### 4. Intermediate Representation of Videos
@@ -288,3 +291,6 @@ python3 rnn_eval.py predicted-frames-GlobalPool-test.pkl pool.model
 
 This will use the `pool.model` to predict the labels of the **pool layer based representation** of the test videos.
 Predictions and corresponding gold labels for each test video will be dumped in to **results.txt**
+
+
+Happy Coding :)
